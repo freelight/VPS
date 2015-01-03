@@ -40,12 +40,12 @@ N2N的实现具有两个部分：supernode中心节点和edge边界节点， 边
 
 edge -a 你想设定的地址 -c 你的虚拟网络的名字 -k 虚拟网络的密码 -l 服务器的地址:端口
 
-		edge -a 10.1.1.x -c chen-net -k password -l 104.224.154.230:8888 &    /*后面这个&让edge后台运行
+		edge -a 10.1.1.x -c chen-net -k password -l x.x.x.x:8888 &    /*后面这个&让edge后台运行
 
 ####将n2n添加到supervisor中运行
 
 增加supervisor的ini文件：
 
 		[program:n2n]
-		command=edge -a 10.1.1.x -c chen-net -k password -l 104.224.154.230:8888
+		command=edge -a 10.1.1.x -c chen-net -k password -l x.x.x.x:8888
 		autostart=true
