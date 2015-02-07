@@ -16,7 +16,7 @@ supervisor安装后会有三个命令`supervisorctl supervisord echo_supervisord
 
 首先生成基本配置文件
 
-	echo_supervisord_conf > /etc/supervisord/supervisord.conf
+	echo_supervisord_conf > /etc/supervisor/supervisord.conf
 
 ######supervisord.conf文件说明
 
@@ -28,7 +28,7 @@ supervisord.conf文件最后有
 可以自定义添加的配置文件，去掉前面的`;`就可以起效，修改files后面的地址为你的相应配置文件地址。
 
 	[include]
-	files = /etc/supervisord.d/conf.d/*.ini
+	files = /etc/supervisor/conf.d/*.ini
 
 以后要添加由supervisor监管的程序，只要在以上目录下建立.ini文件就可以了，文件配置的格式如下：
 
